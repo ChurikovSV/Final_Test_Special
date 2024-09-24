@@ -1,0 +1,44 @@
+mkdir Final_test_specialization_block
+cd Final_test_specialization_block
+cat > pets
+ll
+nano pets
+cd ..
+ls -al
+rm -f Final_test_specialization_block
+sudo rm -f Final_test_specialization_block
+sudo rm -rf Final_test_specialization_block
+ll
+mkdir Final_test_special
+cd Final_test_special
+cat > pets
+cd ..
+sudo rm -fr Final_test_special
+mkdir Final_test_special
+cd Final_test_special
+cat > pets
+cat > pack_animals
+ll
+cat pets pack_animals > animals
+cat animals
+mv animals man_friends
+mkdir all_animals
+ls -al
+mv man_friends all_animals/
+ls -al
+ls all_animals/
+wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.32-1_all.deb
+sudo dpkg -i mysql-apt-config_0.8.32-1_all.deb
+sudo apt-get install mysql-server
+cd ..
+ls -al
+nano .bash_history
+cd ..
+ls -al
+nano ~bash_history
+sudo nano ~/bash_history
+ls -al
+cd ~
+ls -al
+Get-History
+exit
