@@ -6,4 +6,3 @@ public class cat extends pets{
         super(name, age, color, commands);
     }
 }
-
