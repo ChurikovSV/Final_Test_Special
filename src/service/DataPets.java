@@ -3,7 +3,6 @@ package service;
 import model.cat;
 import model.dog;
 import model.hamster;
-
 import java.util.*;
 
 public class DataPets <pet>{
@@ -11,7 +10,6 @@ public class DataPets <pet>{
     public List<pet> getAllPets (){
         return listPets;
     }
-
     public void addPet(pet pet){
         listPets.add(pet);
     }
@@ -45,7 +43,6 @@ public class DataPets <pet>{
         }
         return dog;
     }
-
     public hamster findHamster(String name){
         List<hamster> hamsters = (List<hamster>) this.getHamsters();
         hamster hamster = null;

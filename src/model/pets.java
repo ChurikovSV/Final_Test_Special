@@ -8,34 +8,28 @@ public abstract class pets  implements pet{
     private int age;
     private String color;
     private List<String> commands;
-
     public pets(String name, int age, String color, List<String> commands) {
         this.name = name;
         this.age = age;
         this.color = color;
         this.commands = commands;
     }
-
     @Override
     public String getName() {
         return this.name;
     }
-
     @Override
     public void setName(String name) {
         this.name = name;
     }
-
     @Override
     public int getAge() {
         return this.age;
     }
-
     @Override
     public void setAge(int age) {
         this.age=age;
     }
-
     @Override
     public void addCommand(String newCom) {
         commands.add(newCom);
@@ -44,22 +38,18 @@ public abstract class pets  implements pet{
     public String getColor() {
         return this.color;
     }
-
     @Override
     public void setColor(String color) {
         this.color = color;
     }
-
     @Override
     public List<String> getCommandList() {
         return commands;
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(name);
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
