@@ -4,7 +4,7 @@ import model.cat;
 import model.dog;
 import model.hamster;
 import service.DataPets;
-//import service.Counter;
+import service.Counter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +33,7 @@ public class Controller {
     private Type menuAddPet(){
         Scanner scanner = new Scanner(System.in);
         System.out.println(
-                "\n1. Кот" +
+                "\n1. Кошка" +
                         "\n2. Собака" +
                         "\n3. Хомяк" +
                         "\n4. Выход" +
@@ -102,14 +102,14 @@ public class Controller {
         }
     }
     public void countPet() throws Exception {
-//        Counter counter = new Counter();
+        Counter counter = new Counter();
 
-        System.out.println("В питомнике " + counter.getCount().toString() + " животных.");
+        System.out.println("В питомнике " + counter.getCount().toString() + "шт животных.");
     }
     public void addPet (Type petType) throws Exception{
-//        try (Counter counter = new Counter()) {
-//            counter.add();
-//        }
+        try (Counter counter = new Counter()) {
+            counter.add();
+        }
         String name = req.getString("Введите имя животного: ");
         int age = req.getInteger("Введите возраст животного: ");
         String color = req.getString("Введите окрас животного: ");
@@ -187,3 +187,4 @@ public class Controller {
         System.out.println(commands);
     }
 }
+
