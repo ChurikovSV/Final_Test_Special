@@ -1,7 +1,7 @@
 package model;
 import java.util.List;
 
-public interface pet{
+public interface pet {
     String getName();
     void setName(String name);
     int getAge();
