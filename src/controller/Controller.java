@@ -30,7 +30,7 @@ public class Controller {
             "\n " +
             "\n Выберите необходимый пункт: ";
 
-    private Type menuAddPet(){
+    private Type menuAddPet() {
         Scanner scanner = new Scanner(System.in);
         System.out.println(
                 "\n1. Кошка" +
@@ -40,7 +40,7 @@ public class Controller {
                         "\n " +
                         "\nВыберите необходимый пункт: ");
 
-        while (true){
+        while (true) {
             String key = scanner.next();
             switch (key){
                 case "1":
@@ -131,13 +131,13 @@ public class Controller {
             case Hamster -> dp.addPet(new hamster(name, age, color, commands));
         }
     }
-    public void getAllPets(){
+    public void getAllPets() {
         List<Object> pets = dp.getAllPets();
         for (Object o : pets) {
             System.out.println(o.toString());
         }
     }
-    private void addCommand(Type petType){
+    private void addCommand(Type petType) {
         String name = req.getString("Введите имя животного: ");
         Object obj = null;
 
@@ -147,20 +147,20 @@ public class Controller {
             case Hamster -> obj = dp.findHamster(name);
         }
 
-        if(obj == null){
+        if(obj == null) {
             System.out.println("Такое животное не найдено.");
         }
         else{
             String command = req.getString("Введите новую команду: ");
 
-            switch (petType){
+            switch (petType) {
                 case Cat -> ((cat)obj).addCommand(command);
                 case Dog -> ((dog)obj).addCommand(command);
                 case Hamster -> ((hamster)obj).addCommand(command);
             }
         }
     }
-    private void getPetCommands(Type petType){
+    private void getPetCommands(Type petType) {
         String name = req.getString("Введите имя животного: ");
 
         Object o = null;
@@ -171,14 +171,14 @@ public class Controller {
             case Hamster -> o = dp.findHamster(name);
         }
 
-        if(o == null){
+        if(o == null) {
             System.out.println("Такое животное не найдено.");
             return;
         }
 
         List<String> commands = null;
 
-        switch (petType){
+        switch (petType) {
             case Cat -> commands = ((cat)o).getCommandList();
             case Dog -> commands = ((dog)o).getCommandList();
             case Hamster -> commands = ((hamster)o).getCommandList();

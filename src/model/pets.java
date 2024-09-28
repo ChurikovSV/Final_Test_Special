@@ -3,12 +3,12 @@ package model;
 import java.util.List;
 import java.util.Objects;
 
-public abstract class pets  implements pet{
+public abstract class pets implements pet {
     private String name;
     private int age;
     private String color;
     private List<String> commands;
-    public pets(String name, int age, String color, List<String> commands) {
+    public pets (String name, int age, String color, List<String> commands) {
         this.name = name;
         this.age = age;
         this.color = color;

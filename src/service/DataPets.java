@@ -5,15 +5,15 @@ import model.dog;
 import model.hamster;
 import java.util.*;
 
-public class DataPets <pet>{
+public class DataPets <pet> {
     List<pet> listPets = new ArrayList<pet>();
-    public List<pet> getAllPets (){
+    public List<pet> getAllPets() {
         return listPets;
     }
-    public void addPet(pet pet){
+    public void addPet(pet pet) {
         listPets.add(pet);
     }
-    public List<pet> getCats(){
+    public List<pet> getCats() {
         return listPets.stream().filter(x -> x instanceof cat).toList();
     }
     public List<pet> getDogs (){
@@ -32,22 +32,22 @@ public class DataPets <pet>{
         }
         return cat;
     }
-    public dog findDog(String name){
+    public dog findDog(String name) {
         List<dog> dogs = (List<dog>) this.getDogs();
         dog dog = null;
-        for (dog d : dogs){
-            if (d.getName().equals(name)){
+        for (dog d : dogs) {
+            if (d.getName().equals(name)) {
                 dog = d;
                 break;
             }
         }
         return dog;
     }
-    public hamster findHamster(String name){
+    public hamster findHamster(String name) {
         List<hamster> hamsters = (List<hamster>) this.getHamsters();
         hamster hamster = null;
-        for (hamster h : hamsters){
-            if (h.getName().equals(name)){
+        for (hamster h : hamsters) {
+            if (h.getName().equals(name)) {
                 hamster=h;
                 break;
             }
